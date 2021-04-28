@@ -8,9 +8,6 @@
   height: -moz-fit-content;
   height: fit-content;
 }
-* body header h4 {
-  margin-left: 40px;
-}
 * body header nav {
   width: 100%;
   height: -webkit-fit-content;
