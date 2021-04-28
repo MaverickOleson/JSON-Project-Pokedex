@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body id="landing">
+    <header>
+        <h1>Pokedex</h1>
+        <h4>-by Maverick Oleson and Ayush Singh</h4>
+        <nav>
+            <a href="charmander.html"><h2>Charmander</h2></a>
+            <a href="charmeleon.html"><h2>Charmeleon</h2></a>
+            <a href="charizard.html"><h2>Charizard</h2></a>
+        </nav>
+    </header>
+    <main>
+        <div id="content">
+            <h1 id="pokeName">Charmander</h1>
+            <div id="slide">
+                <h2 onclick="back()">&#60</h2>
+                <a href="charmander.html"><img src="https://cdn2.bulbagarden.net/upload/thumb/7/73/004Charmander.png/900px-004Charmander.png"></a>
+                <h2 onclick="next()">&#62</h2>
+            </div>
+        </div>
+    </main>
+    <script>
+        var slide = 1;
+        function next() {
+            slide++;
+            if(slide > 3) slide = 1;
+            if(slide == 1){
+                $('#pokeName').html('Charmander');
+                $('#slide a').attr('href', 'charmander.html');
+                $('#slide img').attr('src', 'https://cdn2.bulbagarden.net/upload/thumb/7/73/004Charmander.png/900px-004Charmander.png');
+            }
+            if(slide == 2){
+                $('#pokeName').html('Charmeleon');
+                $('#slide a').attr('href', 'charmeleon.html');
+                $('#slide img').attr('src', 'https://cdn2.bulbagarden.net/upload/4/4a/005Charmeleon.png');
+            }
+            if(slide == 3){
+                $('#pokeName').html('Charizard');
+                $('#slide a').attr('href', 'charizard.html');
+                $('#slide img').attr('src', 'https://cdn2.bulbagarden.net/upload/thumb/7/7e/006Charizard.png/900px-006Charizard.png');
+            }
+        }
+        function back() {
+            slide--;
+            if(slide < 1) slide = 3;
+            if(slide == 1){
+                $('#pokeName').html('Charmander');
+                $('#slide a').attr('href', 'charmander.html');
+                $('#slide img').attr('src', 'https://cdn2.bulbagarden.net/upload/thumb/7/73/004Charmander.png/900px-004Charmander.png');
+            }
+            if(slide == 2){
+                $('#pokeName').html('Charmeleon');
+                $('#slide a').attr('href', 'charmeleon.html');
+                $('#slide img').attr('src', 'https://cdn2.bulbagarden.net/upload/4/4a/005Charmeleon.png');
+            }
+            if(slide == 3){
+                $('#pokeName').html('Charizard');
+                $('#slide a').attr('href', 'charizard.html');
+                $('#slide img').attr('src', 'https://cdn2.bulbagarden.net/upload/thumb/7/7e/006Charizard.png/900px-006Charizard.png');
+            }
+        }
+    </script>
+</body>
+</html>
